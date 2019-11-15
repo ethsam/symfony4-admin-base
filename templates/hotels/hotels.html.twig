@@ -1,0 +1,115 @@
+{% extends "/base.html.twig" %}
+
+{% block title %}Hotels | {{ parent() }}{% endblock %}
+
+{% block navbar %}{{ parent() }}{% endblock %}
+
+{% block body %}
+    <section class="home-slider owl-carousel">
+        <div class="slider-item" style="background-image: url('images/bg_3.jpg');" data-stellar-background-ratio="0.5">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row slider-text align-items-center">
+                    <div class="col-md-7 col-sm-12 ftco-animate">
+                        <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span>
+                            <span>Hotels</span></p>
+                        <h1 class="mb-3">Hotels</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END slider -->
+
+<section class="ftco-section-2">
+    <div class="container-fluid">
+        <div class="section-2-blocks-wrapper row no-gutters">
+
+            <div class="text col-sm-12 ftco-animate p-5 text-center">
+                <div class="text-inner align-self-start mt-1">
+
+                    <h3>Welcome to Bon Voyage since 1898 established Far far away.</h3>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                                    there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the
+                                                    Semantics, a large language ocean.</p>
+
+                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                                                    It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <section class="ftco-section">
+        <div class="container" style="max-width:90%;">
+            {#{ dump(listhotels) }#}
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="row">
+
+                        {%  for hotel in listhotels %}
+                        <div class="col-md-4 col-lg-4 mb-4 ftco-animate">
+                            <!-- <a href="#" class="block-5" style="background-image: url('images/hotel-1.jpg');"> -->
+                            <a href="#" class="block-5" style="background-image: url('{{ vich_uploader_asset(hotel, 'imageFile') }}')">
+                                <div class="text">
+                                    <span class="price">$29/night</span>
+                                    <h3 class="heading">{{ hotel.title }}</h3>
+                                    <div class="post-meta">
+                                        <span>Ameeru Ahmed Magu Male’, Maldives</span>
+                                    </div>
+                                    <p class="star-rate">
+                                        <span class="icon-star"></span>
+                                        <span class="icon-star"></span>
+                                        <span class="icon-star"></span>
+                                        <span class="icon-star"></span>
+                                        <span class="icon-star-half-full"></span>
+                                        <span>500reviews</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <!-- END -->
+
+                <div class="col-lg-3 sidebar">
+
+                    <div class="sidebar-box ftco-animate">
+                        <div class="categories">
+                            <h3>Categories</h3>
+                            <li><a href="#">Tours <span>(12)</span></a></li>
+                            <li><a href="#">Hotels <span>(22)</span></a></li>
+                            <li><a href="#">Cruises <span>(37)</span></a></li>
+                            <li><a href="#">Restaurant <span>(42)</span></a></li>
+                            <li><a href="#">Destination <span>(14)</span></a></li>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-box ftco-animate">
+                        <h3>Tag Cloud</h3>
+                        <div class="tagcloud">
+                            <a href="#" class="tag-cloud-link">Life</a>
+                            <a href="#" class="tag-cloud-link">Sport</a>
+                            <a href="#" class="tag-cloud-link">Tech</a>
+                            <a href="#" class="tag-cloud-link">Travel</a>
+                            <a href="#" class="tag-cloud-link">Life</a>
+                            <a href="#" class="tag-cloud-link">Sport</a>
+                            <a href="#" class="tag-cloud-link">Tech</a>
+                            <a href="#" class="tag-cloud-link">Travel</a>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-box ftco-animate">
+                        <h3>Paragraph</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem
+                            necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente
+                            consectetur similique, inventore eos fugit cupiditate numquam!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

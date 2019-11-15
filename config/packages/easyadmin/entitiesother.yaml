@@ -1,0 +1,48 @@
+easy_admin:
+    entities:
+        Articles:
+          class: App\Entity\Articles
+
+        Categories:
+          class: App\Entity\Categories
+          form:
+                  fields:
+                      - { property: 'nom', type: 'text', label: 'Name' }
+                      - { property: 'slug', type: 'text', label: 'Slug' }
+
+        Commentaires:
+          class: App\Entity\Commentaires
+
+        MotsCles:
+          class: App\Entity\MotsCles
+          form:
+                  fields:
+                      - { property: 'mot_cle', type: 'text', label: 'Mots Clé' }
+                      - { property: 'slug', type: 'text', label: 'Slug' }
+        Products:
+          class: App\Entity\Products
+          form:
+                  fields:
+                      - { property: 'productsCategories', label: 'Catégorie' }
+                      - { property: 'title', type: 'text', label: 'Title' }
+                      - { property: 'content', type: 'text', label: 'Content' }
+                      - { property: 'phone', type: 'text', label: 'Phone' }
+                      - { property: 'email', type: 'text', label: 'email' }
+                      - { property: 'website', type: 'text', label: 'Site Web' }
+                      - { property: 'bookingurl', type: 'text', label: 'Booking URL' }
+                      - { property: 'imageFile', type: 'file', label: 'Image' }
+                      - { property: 'img', type: 'text', label: 'Nom Image' }
+                      - { property: 'usercreate', label: 'Utilisateur' }
+                      - { property: 'datecreate', type_options: { widget: 'single_text' }}
+                      - { property: 'publish', label: 'Published Status' }
+
+        ProductCategory:
+          class: App\Entity\ProductsCategory
+
+        HomeSlider:
+          class: App\Entity\HomeSlider
+          form:
+                fields:
+                      - { property: 'intro', type: 'text', label: 'Title' }
+                      - { property: 'imageFile', type: 'file', label: 'Image' }
+                      - { property: 'img', type: 'text', label: 'Alt Attribut' }

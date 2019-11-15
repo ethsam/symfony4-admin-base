@@ -1,0 +1,4 @@
+imports:
+
+    # All Easy Admin config divider in separate yaml files in easyadmin/ dir
+    - { resource: easyadmin/ }
