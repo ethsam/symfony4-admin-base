@@ -9,8 +9,8 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Editor extends User
 {
-    // public function __toString()
-    // {
-    //     return $this->email;
-    // }
+    public function __toString()
+    {
+        return "Editor";
+    }
 }

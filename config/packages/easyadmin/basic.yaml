@@ -15,8 +15,7 @@ easy_admin:
 
         menu:
             - { label: 'Users' }
-            - { entity: 'Admin', icon: 'user' }
-            - { entity: 'Editor', icon: 'user' }
+            - { entity: 'User', icon: 'user' }
             - { label: 'Listings' }
             - { entity: 'Products', label: 'Produits', icon: 'tag' }
             - { entity: 'ProductCategory', label: 'Catégories', icon: 'tag' }

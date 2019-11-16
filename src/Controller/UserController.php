@@ -5,7 +5,7 @@ namespace App\Controller;
 use AlterPHP\EasyAdminExtensionBundle\Controller\AdminController as BaseAdminController;
 use App\Entity\User;
 
-class AdminController extends BaseAdminController
+class UserController extends BaseAdminController
 {
     /**
      * @param User $entity

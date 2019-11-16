@@ -46,3 +46,34 @@ easy_admin:
                       - { property: 'intro', type: 'text', label: 'Title' }
                       - { property: 'imageFile', type: 'file', label: 'Image' }
                       - { property: 'img', type: 'text', label: 'Alt Attribut' }
+        User:
+          class: App\Entity\User
+          controller: App\Controller\UserController
+          form:
+                fields:
+                      - { property: 'email', type: 'text', label: 'E-Mail' }
+                      - { property: 'firstName', type: 'text', label: 'FirstName' }
+                      - { property: 'lastName', type: 'text', label: 'LastName' }
+                      - { property: 'password', type: 'text', label: 'password' }
+                      - property: 'roles'
+                        type: 'choice'
+                        type_options:
+                            mapped: true
+                            expanded: true
+                            multiple: true
+                            choices: { 'Utilisateur': 'ROLE_USER', 'Editor': 'ROLE_EDITOR', 'Administrateur': 'ROLE_ADMIN' }
+                      - { property: 'active', label: 'Active' }
+
+          list:
+              fields: ['email', 'firstName', 'lastName', 'roles', 'active']
+
+          edit:
+              role: [ROLE_ADMIN, ROLE_EDITOR]
+              fields: ['email', 'firstName', 'lastName', 'roles', 'active']
+
+          delete:
+              role: ROLE_ADMIN
+
+          new:
+              role: ROLE_ADMIN
+              fields: ['email', 'firstName', 'lastName', 'password', 'roles', 'active']
