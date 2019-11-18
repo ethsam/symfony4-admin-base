@@ -29,7 +29,7 @@ class ProductsCategory
     private $slug;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Products", inversedBy="productsCategories")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Products", mappedBy="productsCategories")
      */
     private $products;
 

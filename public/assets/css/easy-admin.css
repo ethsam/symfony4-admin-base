@@ -45,3 +45,24 @@ th {
 th a {
     color: white!important;
 }
+
+.main-sidebar {
+    background-color: #fe5f5f;
+}
+
+.sidebar-menu>li>a,
+.sidebar-menu .treeview-menu>li>a {
+    background-color: #fe5f5f;
+    color: #fff;
+}
+
+.sidebar-menu>li:hover>a,
+.sidebar-menu .treeview-menu>li:hover>a,
+.sidebar-menu>li.active>a,
+.sidebar-menu .treeview-menu>li.active>a,
+.sidebar-collapse .sidebar-menu>li.active.submenu-active>a,
+.sidebar-collapse .sidebar-menu>li:hover .treeview-menu>li.active>a {
+    color: #FFFFFF;
+    background: #cb4848;
+    border-left-color: #BBB;
+}

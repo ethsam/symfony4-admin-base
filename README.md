@@ -15,3 +15,7 @@ Clone, run `composer install` or `composer update "symfony/*" --with-all-depende
 #### Easy Admin Config
 
 Configuration YAML files are located under `config/packages/easyadmin` folder, and automatically loaded in main config. Add additional YAML files in this folder, for your new entities etc.
+
+
+php bin/console doctrine:schema:update --dump-sql
+php bin/console doctrine:schema:update --force

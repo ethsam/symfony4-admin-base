@@ -79,7 +79,7 @@ class Products
     private $usercreate;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\ProductsCategory", mappedBy="products")
+     * @ORM\ManyToMany(targetEntity="App\Entity\ProductsCategory", inversedBy="products")
      */
     private $productsCategories;
 

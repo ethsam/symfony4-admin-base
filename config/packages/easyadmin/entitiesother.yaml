@@ -54,7 +54,7 @@ easy_admin:
                       - { property: 'email', type: 'text', label: 'E-Mail' }
                       - { property: 'firstName', type: 'text', label: 'FirstName' }
                       - { property: 'lastName', type: 'text', label: 'LastName' }
-                      - { property: 'password', type: 'text', label: 'password' }
+                      - { property: 'password', type: 'password', label: 'password' }
                       - property: 'roles'
                         type: 'choice'
                         type_options:
