@@ -25,7 +25,7 @@ easy_admin:
                   fields:
                       - { property: 'productsCategories', label: 'Catégorie' }
                       - { property: 'title', type: 'text', label: 'Title' }
-                      - { property: 'content', type: 'text', label: 'Content' }
+                      - { property: 'content', label: 'Content' }
                       - { property: 'phone', type: 'text', label: 'Phone' }
                       - { property: 'email', type: 'text', label: 'email' }
                       - { property: 'website', type: 'text', label: 'Site Web' }
@@ -33,7 +33,7 @@ easy_admin:
                       - { property: 'imageFile', type: 'file', label: 'Image' }
                       - { property: 'img', type: 'text', label: 'Nom Image' }
                       - { property: 'usercreate', label: 'Utilisateur' }
-                      - { property: 'datecreate', type_options: { widget: 'single_text' }}
+                      - { property: 'datecreate', label: 'Date' }
                       - { property: 'publish', label: 'Published Status' }
 
         ProductCategory:

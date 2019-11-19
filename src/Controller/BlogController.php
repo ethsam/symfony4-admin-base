@@ -13,6 +13,15 @@ class BlogController extends AbstractController
     {
         return $this->render('blog/blog.html.twig');
     }
+
+    /**
+     * @Route("/blog/{slug}", methods={"GET"}, name="blogSlug")
+     * @param $slug
+     */
+    public function article($slug)
+    {
+        return $this->render('blog/blog.html.twig', ['slug' => $slug]);
+    }
 }
 
 ?>
